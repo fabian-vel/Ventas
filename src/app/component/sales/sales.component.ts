@@ -5,6 +5,9 @@ export interface PeriodicElement {
   price: number;
 }
 
+let tiempoTranscurrido: Date;
+let hoy: string;
+
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
@@ -41,5 +44,8 @@ export class SalesComponent implements OnInit {
   getTotalCost() {
     return this.dataSource.map(t => t.price).reduce((acc, value) => acc + value, 0);
   }
+
+  tiempoTranscurrido = Date.now();
+  hoy = new Date(tiempoTranscurrido);
 
 }
