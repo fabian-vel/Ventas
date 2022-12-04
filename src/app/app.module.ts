@@ -14,7 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import { SalesComponent } from './component/sales/sales.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { AProductComponent } from './component/a-product/a-product.component';
 
 
 @NgModule({
@@ -24,6 +24,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ProductComponent,
     ToolbarComponent,
     SalesComponent,
+    AProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,8 +35,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatIconModule,
     MatCardModule,
     MatTableModule,
-    MatButtonModule,
-    MatGridListModule
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

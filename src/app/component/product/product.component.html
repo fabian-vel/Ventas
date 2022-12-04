@@ -1,16 +1,8 @@
 <div class="content">
-    <div class="product">
-        <mat-grid-list cols="6">
-            <mat-grid-tile *ngFor="let product of listProduct">
-                <div class="container-card">
-                    <mat-card class="example-card">
-                        <mat-card-header>
-                            <mat-card-title class="title-card">{{product.name}}</mat-card-title>
-                        </mat-card-header>
-                        <img mat-card-image src={{product.img}} alt="Photo of a Shiba Inu">
-                    </mat-card>
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
-    </div>
+        <div class="container--grid">
+        <app-a-product 
+        [product]="product"
+        *ngFor="let product of products">
+        </app-a-product>
+        </div>
 </div>

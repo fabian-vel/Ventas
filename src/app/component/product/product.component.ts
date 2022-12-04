@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Products } from 'src/app/models/product.models';
 @Component({
   selector: 'app-product',
@@ -12,7 +12,9 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  listProduct: Products[] = [
+  @Output() addNewVenta = new EventEmitter<Products>();
+
+  products: Products[] = [
     {
       name: "Gaseosa",
       img: "https://uploadgerencie.com/imagenes/devolucion-productos.png"
@@ -37,5 +39,6 @@ export class ProductComponent implements OnInit {
       name: "Lapiz",
       img: "https://uploadgerencie.com/imagenes/devolucion-productos.png"
     }
-  ]
+  ];
+
 }
