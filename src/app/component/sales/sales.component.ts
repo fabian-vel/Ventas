@@ -7,7 +7,7 @@ export interface PeriodicElement {
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
-  styleUrls: ['./sales.component.sass']
+  styleUrls: ['./sales.component.scss']
 })
 export class SalesComponent implements OnInit {
 

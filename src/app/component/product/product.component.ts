@@ -1,14 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Products {
-  name: string;
-  img: string;
-}
-
+import { Products } from 'src/app/models/product.models';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.sass']
+  styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
 
