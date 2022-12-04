@@ -12,4 +12,10 @@ export class ToolbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getFecha(){
+    const tiempoTranscurrido = Date.now();
+    const hoy = new Date(tiempoTranscurrido);
+    return hoy;
+  }
+
 }

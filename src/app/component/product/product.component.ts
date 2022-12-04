@@ -33,6 +33,14 @@ export class ProductComponent implements OnInit {
     {
       name: "Copia",
       img: "https://uploadgerencie.com/imagenes/devolucion-productos.png"
+    },
+    {
+      name: "Cartulina",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png"
+    },
+    {
+      name: "Lapiz",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png"
     }
   ]
 }

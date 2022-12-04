@@ -13,6 +13,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { SalesComponent } from './component/sales/sales.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
