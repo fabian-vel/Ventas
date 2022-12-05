@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SalesListService } from 'src/app/services/sales-list.service';
+import { Products } from 'src/app/models/product.models';
 
-export interface PeriodicElement {
-  name: string;
-  price: number;
-}
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
@@ -11,39 +9,28 @@ export interface PeriodicElement {
 })
 export class SalesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private salesListaService: SalesListService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  dataSource: PeriodicElement[] = [
-    {
-      name: "Gaseosa",
-      price: 20000
-    },
-    {
-      name: "Malta",
-      price: 20000
-    },
-    {
-      name: "Galletas",
-      price: 20000
-    },
-    {
-      name: "Copia",
-      price: 20000
-    }
-  ];
+  product: Products[] = [];
+
+  get dataSource() {
+    return  this.product = this.salesListaService.listaProductSold;
+  }
 
   displayedColumns: string[] = ['name', 'price'];
 
   getTotalCost() {
-    return this.dataSource.map(t => t.price).reduce((acc, value) => acc + value, 0);
+    return this.salesListaService.listaProductSold.map(t => t.price).reduce((acc, value) => acc + value, 0);
   }
-getFecha(){
-  const tiempoTranscurrido = Date.now();
-  const hoy = new Date(tiempoTranscurrido);
-  return hoy;
-}
+  getFecha() {
+    const tiempoTranscurrido = Date.now();
+    const hoy = new Date(tiempoTranscurrido);
+    return hoy;
+  }
 
 }

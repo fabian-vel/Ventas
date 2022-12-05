@@ -16,6 +16,7 @@ export class AProductComponent implements OnInit {
   @Input() product: Products = {
     name: '',
     img: '',
+    price: 0
   }
 
   @Output() addEventVenta = new EventEmitter<Products>();
