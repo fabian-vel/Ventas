@@ -9,24 +9,23 @@ import { Products } from 'src/app/models/product.models';
 })
 export class SalesComponent implements OnInit {
 
+  dataSource: Products[] = [];
+
   constructor(
     private salesListaService: SalesListService
-  ) { }
+  ) {
+    this.dataSource = this.salesListaService.getListaProductSold();
+   }
 
   ngOnInit(): void {
-  }
-
-  product: Products[] = [];
-
-  get dataSource() {
-    return  this.product = this.salesListaService.listaProductSold;
   }
 
   displayedColumns: string[] = ['name', 'price'];
 
   getTotalCost() {
-    return this.salesListaService.listaProductSold.map(t => t.price).reduce((acc, value) => acc + value, 0);
+    return this.salesListaService.getTotalCost();
   }
+
   getFecha() {
     const tiempoTranscurrido = Date.now();
     const hoy = new Date(tiempoTranscurrido);

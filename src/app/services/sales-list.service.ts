@@ -10,12 +10,16 @@ export class SalesListService {
 
   private listaProducts: Products[] = [];
 
-  get listaProductSold() {
+  getListaProductSold() {
     return this.listaProducts;
   }
 
   addProduct(product: Products) {
     this.listaProducts.push(product);
+  }
+
+  getTotalCost() {
+    return this.listaProducts.map(t => t.price).reduce((acc, value) => acc + value, 0);
   }
 
 }
