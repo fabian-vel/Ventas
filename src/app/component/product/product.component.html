@@ -2,7 +2,8 @@
         <div class="container--grid">
         <app-a-product 
         [product]="product"
-        *ngFor="let product of products">
-        </app-a-product>
+        *ngFor="let product of products"
+        (addEventVenta)="onAddListaVenta($event)"
+        ></app-a-product>
         </div>
 </div>

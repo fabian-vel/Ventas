@@ -12,8 +12,6 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Output() addNewVenta = new EventEmitter<Products>();
-
   products: Products[] = [
     {
       name: "Gaseosa",
@@ -41,4 +39,7 @@ export class ProductComponent implements OnInit {
     }
   ];
 
+  onAddListaVenta(product: Products) {
+    console.log(product);
+  }
 }
