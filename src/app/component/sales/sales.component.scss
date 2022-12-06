@@ -1,3 +1,15 @@
-.mat-elevation{
-    width: 350px;
+table tr th{ 
+    text-align: center;
+    font-size: 15px;
+}
+
+table, tr, td, th {
+    border-bottom: 2px solid rgb(212, 212, 212);
+    border-collapse: collapse;
+    width: 30vw;
+}
+
+.example-button-row {
+    display: flex;
+    flex-direction: row;
 }

@@ -12,9 +12,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { SalesComponent } from './component/sales/sales.component';
-import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { AProductComponent } from './component/a-product/a-product.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -34,7 +34,7 @@ import { AProductComponent } from './component/a-product/a-product.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule,
+    MatPaginatorModule,
     MatButtonModule
   ],
   providers: [],

@@ -1,26 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { SalesListService } from 'src/app/services/sales-list.service';
 import { Products } from 'src/app/models/product.models';
+import {MatPaginator} from '@angular/material/paginator';
+
+const transactions: Products[] =[];
 
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
-  styleUrls: ['./sales.component.scss']
+  styleUrls: ['./sales.component.scss'],
 })
 export class SalesComponent implements OnInit {
 
-  dataSource: Products[] = [];
-
   constructor(
     private salesListaService: SalesListService
-  ) {
-    this.dataSource = this.salesListaService.getListaProductSold();
-   }
+  ) {}
+  
 
   ngOnInit(): void {
   }
 
-  displayedColumns: string[] = ['name', 'price'];
+  getProduct() {
+    return this.salesListaService.getListaProductSold();
+  }
 
   getTotalCost() {
     return this.salesListaService.getTotalCost();

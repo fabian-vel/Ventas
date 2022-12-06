@@ -1,30 +1,33 @@
-<div class="content">
-  {{dataSource | json}}
+<section class="content">
   <h1 class="title">Ventas del dia</h1>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation">
+  <div class="table-sales">
+    <table datable>
+      <thead>
+        <tr>
+          <!--<th>Img</th>-->
+          <th>Producto</th>
+          <th>Precio</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of getProduct()">
+          <!--<td style="text-align: center;"><img src={{product.img}} width="100px"></td>-->
+          <td style="text-align: center;">{{product.name}}</td>
+          <td style="text-align: center;">{{product.price | currency}}</td>
+          <td style="text-align: right;">
+            <div class="example-button-row">
+              <button mat-button color="primary"><mat-icon>edit</mat-icon></button>
+              <button mat-button color="accent"><mat-icon>delete</mat-icon></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <ng-container matColumnDef="img">
-      <th mat-header-cell *matHeaderCellDef>Img</th>
-      <td mat-cell *matCellDef="let element"><img src={{ element.img }} width="50px"></td>
-      <td mat-footer-cell *matFooterCellDef>Total</td>
-    </ng-container>
+  <div class="total">
+    <h2>Total {{getTotalCost() | currency}}</h2>
+  </div>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-      <td mat-footer-cell *matFooterCellDef>TOTAL</td>
-    </ng-container>
-
-    <!-- Price Column -->
-    <ng-container matColumnDef="price">
-      <th mat-header-cell *matHeaderCellDef>Price</th>
-      <td mat-cell *matCellDef="let element">{{ element.price | currency }}</td>
-      <td mat-footer-cell *matFooterCellDef>{{ getTotalCost() | currency }}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
-  </table>
-</div>
+</section>
