@@ -14,7 +14,8 @@ import {MatCardModule} from '@angular/material/card';
 import { SalesComponent } from './component/sales/sales.component';
 import {MatButtonModule} from '@angular/material/button';
 import { AProductComponent } from './component/a-product/a-product.component';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { SalesListComponent } from './component/sales-list/sales-list.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     ToolbarComponent,
     SalesComponent,
     AProductComponent,
+    SalesListComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatPaginatorModule,
+    ScrollingModule,
     MatButtonModule
   ],
   providers: [],

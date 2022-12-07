@@ -1,9 +1,8 @@
 <div class="content">
-        <div class="container--grid">
-        <app-a-product 
-        [product]="product"
-        *ngFor="let product of products"
-        (addEventVenta)="onAddListaVenta($event)"
-        ></app-a-product>
-        </div>
+        <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport">
+                <div class="container--grid">
+                        <app-a-product [product]="product" *ngFor="let product of products"
+                                (addEventVenta)="onAddListaVenta($event)"></app-a-product>
+                </div>
+        </cdk-virtual-scroll-viewport>
 </div>
