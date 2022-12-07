@@ -1,5 +1,8 @@
 <section class="content">
-  <h1 class="title">Ventas del dia</h1>
+  <div class="header">
+    <h1 class="title">Ventas del dia</h1>
+    <h2 class="total">Total {{getTotalCost() | currency}}</h2>
+  </div>
   <div class="table-sales">
     <table datable>
       <thead>
@@ -25,9 +28,4 @@
       </tbody>
     </table>
   </div>
-
-  <div class="total">
-    <h2>Total {{getTotalCost() | currency}}</h2>
-  </div>
-
 </section>

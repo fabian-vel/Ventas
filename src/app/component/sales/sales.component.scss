@@ -1,4 +1,18 @@
-table tr th{ 
+.header {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.title {
+    width: 15vw;
+}
+
+.total {
+    width: 15vw;
+    text-align: end;
+}
+
+table tr th { 
     text-align: center;
     font-size: 15px;
 }

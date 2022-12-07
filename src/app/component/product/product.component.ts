@@ -46,6 +46,41 @@ export class ProductComponent implements OnInit {
       name: "Lapiz",
       img: "https://uploadgerencie.com/imagenes/devolucion-productos.png",
       price: 1000
+    },
+    {
+      name: "Recreo",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png",
+      price: 800
+    },
+    {
+      name: "Cartulina 8vo",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png",
+      price: 800
+    },
+    {
+      name: "Lapicero",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png",
+      price: 1000
+    },
+    {
+      name: "Resma",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png",
+      price: 23000
+    },
+    {
+      name: "Yupi",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png",
+      price: 300
+    },
+    {
+      name: "Speed Max",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png",
+      price: 1600
+    },
+    {
+      name: "Gaseosa Litro",
+      img: "https://uploadgerencie.com/imagenes/devolucion-productos.png",
+      price: 2500
     }
   ];
 
