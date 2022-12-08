@@ -1,10 +1,29 @@
 <p>
     <mat-toolbar color="primary">
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" >
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['sales-list']">
+                <mat-icon>list</mat-icon>
+                <span>Sales</span>
+            </button>
+            <button mat-menu-item [routerLink]="['view']">
+                <mat-icon>shop</mat-icon>
+                <span>Product</span>
+            </button>
+        </mat-menu>
+        <!--<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
             <mat-icon [routerLink]="['sales-list']">menu</mat-icon>
         </button>
-        <span>Tienda</span>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon [routerLink]="['view']">menu</mat-icon>
+        </button>-->
+        <span>
+            <h1>Tienda</h1>
+        </span>
         <span class="example-spacer"></span>
-        <h4>{{ getFecha() | date:'EEEE, dd MMMM, YYYY'  }}</h4>
+        <h4>{{ getFecha() | date:'EEEE, dd MMMM, YYYY' }}</h4>
     </mat-toolbar>
 </p>

@@ -1,13 +1,15 @@
 <div class="content">
     <div class="list-sales">
-        <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport">
+        <!---<cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport">-->
             <table datable>
                 <thead>
                     <tr>
                         <!--<th>Img</th>-->
                         <th>Producto</th>
                         <th>Precio</th>
-                        <th></th>
+                        <th>Cantidad</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -15,6 +17,9 @@
                         <!--<td style="text-align: center;"><img src={{product.img}} width="100px"></td>-->
                         <td style="text-align: center;">{{product.name}}</td>
                         <td style="text-align: center;">{{product.price | currency}}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td style="text-align: right;">
                             <div class="example-button-row">
                                 <button mat-button color="primary">
@@ -28,6 +33,6 @@
                     </tr>
                 </tbody>
             </table>
-        </cdk-virtual-scroll-viewport>
+        <!--</cdk-virtual-scroll-viewport>--->
     </div>
 </div>
