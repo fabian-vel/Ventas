@@ -1,14 +1,19 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Products } from 'src/app/models/product.models';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-a-product',
   templateUrl: './a-product.component.html',
-  styleUrls: ['./a-product.component.scss']
+  styleUrls: ['./a-product.component.scss'],
+  providers: [NgbModalConfig, NgbModal],
 })
 export class AProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(config: NgbModalConfig, private modalService: NgbModal) {
+    config.backdrop = 'static';
+    config.keyboard = false;
+  }
 
   ngOnInit(): void {
   }
@@ -24,5 +29,10 @@ export class AProductComponent implements OnInit {
   onAddNewVenta() {
     this.addEventVenta.emit(this.product);
   }
+
+  open(content: any) {
+		this.modalService.open(content);
+	}
+
 
 }

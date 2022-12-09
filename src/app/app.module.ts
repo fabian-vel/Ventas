@@ -17,6 +17,7 @@ import { AProductComponent } from './component/a-product/a-product.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { SalesListComponent } from './component/sales-list/sales-list.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatCardModule,
     ScrollingModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
