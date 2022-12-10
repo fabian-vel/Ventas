@@ -2,7 +2,6 @@ export interface SouldProduct {
     name: string;
     img: string;
     price: number;
-    date: Date;
-    hour: Date;
+    dates: Date;
     amount: number;
 }
